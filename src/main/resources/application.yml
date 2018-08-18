@@ -9,6 +9,10 @@ spring:
       percentage: 1.0
     stream:
       enabled: true
+  datasource:
+    url: jdbc:mysql://://mysql.training:3306/manager_serice?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: choerodon
   kafka: #使用原生spring kafka需要配置
     bootstrap-servers: localhost:9092
     consumer:
