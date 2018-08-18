@@ -14,16 +14,16 @@ import io.choerodon.swagger.annotation.Permission;
 @RestController
 @RequestMapping("v1/demo")
 public class DemoController {
+    @Value("${id}")
+    private String id;
 
-    @Value("${person.name}")
-    String name;
-    @Value("${person.id}")
-    String id;
+    @Value("${name}")
+    private String name;
 
     @GetMapping("/hello")
     @Permission(level = ResourceLevel.SITE, permissionPublic = true)
     @ApiOperation(value = "demo")
     public ResponseEntity<String> hello() {
-        return new ResponseEntity<String>("hello,"+name+","+id, HttpStatus.OK);
+        return new ResponseEntity<String>("hello,"+id+","+name, HttpStatus.OK);
     }
 }
