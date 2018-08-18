@@ -1,5 +1,5 @@
 server:
-  port: 18080
+  port: 20609
 spring:
   application:
     name: train-20609
